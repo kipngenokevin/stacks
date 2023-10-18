@@ -17,4 +17,6 @@ typedef struct stack_s
 } stack_t;
 
 void push(int num, stack_t **head);
+void print(stack_t *head);
+int pop(stack_t **head);
 #endif
