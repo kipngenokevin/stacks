@@ -9,10 +9,11 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 
+	(void)line_number;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		printf("Error: malloc failed");
+		fprintf(stderr, "Error: malloc failedi\n");
 		exit(EXIT_FAILURE);
 	}
 	new_node->n = num;
@@ -23,5 +24,4 @@ void push(stack_t **stack, unsigned int line_number)
 		(*stack)->prev = new_node;
 	}
 	*stack = new_node;
-	printf("Inserted to stack instruction from line %d\n", line_number);
 }
